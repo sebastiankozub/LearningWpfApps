@@ -28,6 +28,8 @@ namespace LearningWpfApp.Views
         {
             RestaurantMenuWindow NewWindowB = new RestaurantMenuWindow();
             NewWindowB.Show();
+
+            //this.Parent...
         }
 
         protected override void OnInitialized(EventArgs e) // breaking mvvm -should be opened by relay commands - just to test more methods of new UIElement creation
@@ -36,11 +38,6 @@ namespace LearningWpfApp.Views
 
             RestaurantMenuWindow NewWindowB = new RestaurantMenuWindow();
             NewWindowB.Show();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

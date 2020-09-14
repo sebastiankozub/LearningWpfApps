@@ -11,6 +11,7 @@
             <ColumnDefinition Width="29*"/>
             <ColumnDefinition Width="21*"/>
         </Grid.ColumnDefinitions>
+        <WrapPanel />
 
     </Grid>
 </Window>

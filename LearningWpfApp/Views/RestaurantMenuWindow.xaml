@@ -3,14 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:LearningWpfApp.Views"
+        xmlns:local="clr-namespace:LearningWpfApp.Views" 
+        xmlns:control="clr-namespace:LoadingControl.Control"
         mc:Ignorable="d"
         Title="{Binding Title}" Height="450" Width="800"
         DataContext="{Binding Source={StaticResource Locator}, Path=RestaurantMenuViewModel}"
         >
 
-    <Grid>
-
+    <Grid>        
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="293*" />
             <ColumnDefinition Width="105*"/>
@@ -118,6 +119,8 @@
             </Button>
         </DockPanel>
 
+        <control:LoadingAnimation x:Name="Indy83" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible" Background="white" Grid.RowSpan="3" Grid.ColumnSpan="4" />
+        
     </Grid>
 
 </Window>

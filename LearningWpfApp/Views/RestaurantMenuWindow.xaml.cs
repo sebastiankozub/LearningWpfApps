@@ -1,6 +1,8 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Threading;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,6 +22,21 @@ namespace LearningWpfApp.Views
         public RestaurantMenuWindow()
         {
             InitializeComponent();
+            Loaded += LoadedHandler;
         }
+
+        public override void EndInit()
+        {
+            base.EndInit();
+        }
+
+        public void LoadedHandler(object sender, RoutedEventArgs e)
+        {
+            var task = new Task(() => { Task.Delay(5000).Wait(); DispatcherHelper.CheckBeginInvokeOnUI(() => Indy83.Visibility = Visibility.Collapsed); });
+            task.Start();
+            this.Topmost = true;
+            this.Show();
+        }
+
     }
 }
