@@ -98,7 +98,7 @@ namespace LearningWpfApp.ViewModels
                     {
                         SelectedDishes.Add(item);
 
-                        Count = SelectedDishes.Count;   // could be binded to SelectedDishes ListView and working automatically
+                        Count = SelectedDishes.Count;   // should or could? be binded to SelectedDishes ListView and working automatically
                         Cost = SelectedDishes.Sum(dish => dish.Price);
                     });
             }
@@ -110,7 +110,7 @@ namespace LearningWpfApp.ViewModels
             {
                 SelectedDishes.Clear();  
 
-                Count = 0;  // could be binded to SelectedDishes ListView and working automatically
+                Count = 0;  // should or could? be binded to SelectedDishes ListView and working automatically
                 Cost = 0;
             }));
     }

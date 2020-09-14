@@ -24,13 +24,13 @@ namespace LearningWpfApp.Views
             Loaded += OnLoaded;
         }
 
-        private void OnLoaded(object sender, RoutedEventArgs e)  // breaking mvvm -should be opened by relay commands
+        private void OnLoaded(object sender, RoutedEventArgs e)  // breaking mvvm -should be opened by relay commands - just to test more methods of new UIElement creation
         {
             RestaurantMenuWindow NewWindowB = new RestaurantMenuWindow();
             NewWindowB.Show();
         }
 
-        protected override void OnInitialized(EventArgs e) // breaking mvvm -should be opened by relay commands
+        protected override void OnInitialized(EventArgs e) // breaking mvvm -should be opened by relay commands - just to test more methods of new UIElement creation
         {
             base.OnInitialized(e);
 
