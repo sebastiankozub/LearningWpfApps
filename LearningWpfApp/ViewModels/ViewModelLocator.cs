@@ -46,15 +46,11 @@ namespace LearningWpfApp.ViewModels
             //SimpleIoc.Default.Register<INavigationService, NavigationService>();
             SimpleIoc.Default.Register<StartPageViewModel>();
             SimpleIoc.Default.Register<RestaurantMenuViewModel>();
+            SimpleIoc.Default.Register<OrderSummaryViewModel>();
         }
 
 
-        // <summary>
-        // Gets the StartPage view model.
-        // </summary>
-        // <value>
-        // The StartPage view model.
-        // </value>
+
         public StartPageViewModel StartPageViewModel
         {
             get
@@ -70,6 +66,15 @@ namespace LearningWpfApp.ViewModels
                 return ServiceLocator.Current.GetInstance<RestaurantMenuViewModel>();
             }
         }
+        
+        public OrderSummaryViewModel OrderSummaryViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<OrderSummaryViewModel>();
+            }
+        }
+
 
         // <summary>
         // The cleanup.
